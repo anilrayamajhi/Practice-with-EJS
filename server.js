@@ -26,6 +26,9 @@ app.use(express.static(__dirname + '/public'));
 
 app.use('/', pagesRoutes);
 app.use('/api', usersRoutes);
+app.use('*', function(req, res){
+  res.render('errPage', {title: "Fuck its 404!"});
+});
 
 app.listen(3000, function(err) {
   if(err) return console.log(err);
