@@ -1,4 +1,10 @@
 <h1><%= title %></h1>
+<select name="select">
+  <option value="get" selected>Get</option>
+  <option value="post">Post</option>
+  <option value="patch">Patch</option>
+  <option value="delete">Delete</option>
+</select><br />
   <% loopUsers.forEach(function(el) { %>
     <h3><%= el.name %>&emsp;&emsp;&emsp;<%= el.email %></h3><hr />
   <% }) %>
